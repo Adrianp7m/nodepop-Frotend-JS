@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NodePop</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+
+    <div class="global-errors hidden"></div>
+
+    <div class="container">
+
+      <div class="container is-fluid">
+        <div class="notification is-primary ">
+            <strong class="is-size-3"> NodePop     </strong>
+            
+            <div class="is-pulled-right ">
+              <h1 class="title">Nuevo Anuncio</h1>
+
+            </div>
+        </div>
+    </div>
+        <div class="columns">          
+              <div class="column is-three-fifths is-offset-one-fifth">        
+                <form>
+                    <br>
+                  <p class="is-size-5 has-background-primary-light has-text-primary-dark">Nombre del anuncio</p>
+                    <input name="nombreForm" class="input is-danger" type="text" placeholder="Nombre del anuncio" required>
+                    <p class="is-size-5 has-background-primary-light has-text-primary-dark">Tipo de transacción</p>
+                    <div class="select">
+                        <select name="ventaForm">
+                            <option value=true>Vendo</option>
+                            <option value=false>Compro</option>
+                        </select>
+                    </div>
+                    <p class="is-size-5 has-background-primary-light has-text-primary-dark">Precio del producto</p>
+                    <input name="precioForm" class="input" type="text" placeholder="0,0">
+                    <p class="is-size-5 has-background-primary-light has-text-primary-dark">Clasificación del producto</p>
+                    <div class="select is-multiple">
+                        <select name="tagsForm" multiple size="4" required>
+                          <option value="work">Work</option>
+                          <option value="lifestyle">Lifestyle</option>
+                          <option value="motor">Motor</option>
+                          <option value="mobile">Mobile</option>
+                        </select>
+                      </div>
+                      <p class="is-size-5 has-background-primary-light has-text-primary-dark">Descripción</p>
+                    <textarea name="descriptionForm" class="textarea" placeholder="Descripción del producto..." required></textarea>
+              
+                    <br>
+                    <input class="button is-primary is-pulled-right" type="file" name="file" accept="image/*">
+                    <button name="saveAd" class="button is-info" disabled>Publicar</button>
+                    <button name="backForm" class="button is-success">Back</button>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/new-ad.js"></script>
+</body>
+</html>
